@@ -1,9 +1,8 @@
-import { TimersManager } from 'eternal-timer';
+import { JSONLTimersManager } from 'eternal-timer';
 
 async function main() {
     // By default, timers are stored in '.timers.jsonl' in the project root.
-    // Using a .jsonl file enables storing title and description.
-    const manager = new TimersManager();
+    const manager = new JSONLTimersManager();
 
     // Create a timer (5 seconds) with a title and description
     const timerId = await manager.createTimer(5000, 'My Timer', 'This is a test timer.');
